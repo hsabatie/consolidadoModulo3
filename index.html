@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ConsolidadoModuloTres</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">        
+        <button class="navbar__boton" onclick="menu()">Menú</button>
+        <ul class="navbar__menu" id="navbar__menu">
+            <li>Preguntas Frecuentes</li>
+            <li>Manueales y tutoriales</li>
+            <li>Noticias</li>
+            <li>Calendario</li>
+            <li>Perfil</li>
+            <li>Organigrama</li>
+            <li>Chat soporte</li>
+        </ul>
+    </nav>
+    <main>
+        <div class="contactosChat">
+            
+            <div class="contenedor">
+               
+                <div class="contenedor__ul" id="contenedorUl">
+                    <div class="buscar">
+                        <input class="buscar__texto" type="text" placeholder="Buscar">
+                        <button class="">
+                            <i class="fa-duotone fa-solid fa-magnifying-glass"></i>
+                        </button>
+                        <div class="buscar__user">
+                            <img src="assets/imagen/imagen 10.jpg" alt="">
+                        </div>
+                        </div>
+                    <ul class="contenedor__lista">
+                        <li class="contenedor__contacto" onclick="MostrarChat('Juan Antonio','assets/imagen/image 1.jpg')">
+                            <div class="contenedor__imagen">
+                                <img src="assets/imagen/image 1.jpg" alt="" id="imagen1">
+                            </div>
+                            <div class="contenedor__nombre">
+                                <h3>Juan Antonio</h3>
+                                <p>10:45</p>
+                            </div>
+                        </li>
+                        <li class="contenedor__contacto" onclick="MostrarChat('Melisa Charlott','assets/imagen/imagen 2.jpg')">
+                            <div class="contenedor__imagen">
+                                <img src="assets/imagen/imagen 2.jpg" alt="" id="imagen1">
+                            </div>
+                            <div class="contenedor__nombre">
+                                <h3>Melisa Charlott</h3>
+                                <p>10:45</p>
+                            </div>
+                        </li>
+                        <li class="contenedor__contacto" onclick="MostrarChat('Abuelo','assets/imagen/imagen 3.jpg')">
+                            <div class="contenedor__imagen">
+                                <img src="assets/imagen/imagen 3.jpg" alt="" id="imagen1">
+                            </div>
+                            <div class="contenedor__nombre">
+                                <h3>Abuelo</h3>
+                                <p>10:45</p>
+                            </div>
+                        </li>
+                        
+                        <li class="contenedor__contacto" onclick="MostrarChat('Andrea Molina','assets/imagen/imagen 6.jpg')">
+                            <div class="contenedor__imagen">
+                                <img src="assets/imagen/imagen 6.jpg" alt="" id="imagen1">
+                            </div>
+                            <div class="contenedor__nombre">
+                                <h3>Andrea Molina</h3>
+                                <p>23:09</p>
+                            </div>
+                        </li>
+                        <li class="contenedor__contacto" onclick="MostrarChat('Tamara Scott','assets/imagen/imagen 4.jpg')">
+                            <div class="contenedor__imagen">
+                                <img src="assets/imagen/imagen 4.jpg" alt="" id="imagen1">
+                            </div>
+                            <div class="contenedor__nombre">
+                                <h3>Tamara Scott</h3>
+                                <p>10:45</p>
+                            </div>
+                        </li>
+                        <li class="contenedor__contacto" onclick="MostrarChat('Cecilia Luna','assets/imagen/imagen 7.jpg')">
+                            <div class="contenedor__imagen">
+                                <img src="assets/imagen/imagen 7.jpg" alt="" id="imagen1">
+                            </div>
+                            <div class="contenedor__nombre">
+                                <h3>Cecilia Luna</h3>
+                                <p>10:45</p>
+                            </div>
+                        </li>
+                        <li class="contenedor__contacto" onclick="MostrarChat('Rodri Perez','assets/imagen/imagen 8.jpg')">
+                            <div class="contenedor__imagen">
+                                <img src="assets/imagen/imagen 8.jpg" alt="" id="imagen1">
+                            </div>
+                            <div class="contenedor__nombre">
+                                <h3>Rodri Perez</h3>
+                                <p>10:45</p>
+                            </div>
+                        </li>
+                        <li class="contenedor__contacto" onclick="MostrarChat('Gabriel','assets/imagen/imagen 9.jpg')">
+                            <div class="contenedor__imagen">
+                                <img src="assets/imagen/imagen 9.jpg" alt="" id="imagen1">
+                            </div>
+                            <div class="contenedor__nombre">
+                                <h3>Gabriel</h3>
+                                <p>10:45</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>        
+                <div class="chat hidden" id="chat">
+                    <div class="chat__cabecera">
+                        <button onclick="mostrarContactos()">Volver</button>
+                        <h2 id="NombreContacto">Seleccione un contacto</h2>
+                        <div class="chat__imagen">
+                            <img id="imagenUsuario" src="" alt="">
+                        </div>
+                    </div>
+                    <div class="chat__mensajes" id="chatMensajes">
+                        <!-- Mensajes del chat -->
+                        <div class="recivido">
+                            <p>¡Hola! ¿Cómo estás?</p>
+                            <span class="hora">10:45 AM</span>
+                        </div>
+                        <div class="enviado">
+                            <p>Estoy bien, gracias. ¿Y tú?</p>
+                            <span class="hora">10:46 AM</span>
+                        </div>
+                        <div class="recivido">
+                            <p>Todo bien por aquí, solo descansando un poco.</p>
+                            <span class="hora">10:47 AM</span>
+                        </div>
+                        <div class="enviado">
+                            <p>Qué bueno, me alegra escuchar eso Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia dignissimos quaerat voluptatum incidunt totam iste! Quos minima quibusdam, velit illo sit reiciendis itaque enim ea aliquid, tenetur quam, ad impedit..</p>
+                            <span class="hora">10:48 AM</span>
+                        </div>
+                    </div>
+                    <div class="chat__footer">
+                        <input type="text" id="inputMensaje" placeholder="Escribe un mensaje...">
+                        <button id="botonEnviar" onclick="enviarMensaje()">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                        
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </main>
+
+    <script src="assets/scrip.js"></script>
+</body>
+</html>
